@@ -11,7 +11,7 @@ public class hanoi{
 	 * @param b 柱子b
 	 * @param c 柱子c
 	 */
-	static void hanoiSolve(int num,char a,char b,char c){
+	public static void hanoiSolve(int num,char a,char b,char c){
 		if(num==1){//如果只有一层，那么直接将圆环从柱子a放到柱子c
 			System.out.println(a+"——>"+c);
 		}else{

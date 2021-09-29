@@ -10,11 +10,11 @@ public class queens{
 		System.out.println("共有："+count+"摆法");
 	}
 
-	static void place(){
+	public static void place(){
 		place(0);
 	}
 
-	static void place(int n){
+	private static void place(int n){
 		if(n==8){//因为第一个皇后摆放在第0个位置，当n==8时，就已经摆放完毕
 			print();//打印摆法
 			return;
@@ -39,7 +39,7 @@ public class queens{
 	 * @n 放置第n个皇后
 	 * @return 合理就返回true，不合理就false
 	 */
-	static boolean isReasonable(int n){
+	private static boolean isReasonable(int n){
 		for(int i=0;i<n;i++){
 			if(arr[n]==arr[i]||Math.abs(arr[n]-arr[i])==Math.abs(n-i)){
 				return false;
@@ -52,7 +52,7 @@ public class queens{
 	 * 用于打印摆放方法
 	 * 
 	 */
-	static void print(){
+	public static void print(){
 		count++;
 		System.out.println(Arrays.toString(arr));
 	}

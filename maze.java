@@ -1,9 +1,9 @@
 import java.util.*;
 
 public class maze{
-	static final int CAPACITY=7;
+	private static final int CAPACITY=7;
 	
-	static int[][] arr=new int[CAPACITY][CAPACITY];
+	private static int[][] arr=new int[CAPACITY][CAPACITY];
 
 	public static void main(String[] args){
 		//初始化数组
@@ -22,7 +22,7 @@ public class maze{
 	 * @param lin 起始位置的列号
 	 * @return 找到就返回true，找不到就返回false
 	 */
-	static boolean runOut(int row,int lin){
+	public static boolean runOut(int row,int lin){
 		//找到出口就返回
 		if(arr[CAPACITY-2][CAPACITY-2]==2){
 			return true;
@@ -55,7 +55,7 @@ public class maze{
 	 * 初始化数组，并设置障碍
 	 * 
 	 */
-	static void initArr(){
+	public static void initArr(){
 		for(int row=0;row<arr.length;row++){
 			arr[0][row]=1;
 			arr[CAPACITY-1][row]=1;
@@ -67,7 +67,7 @@ public class maze{
 	}
 
 
-	static void printArr(){
+	public static void printArr(){
 		for(int i=0;i<arr.length;i++){
 			System.out.println(Arrays.toString(arr[i]));
 		}
